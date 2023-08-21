@@ -18,11 +18,12 @@ layout: default
   {% endif %}
 </div>
 
-
-        {% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample:10 %}
+<ul>
+        {% assign posts = site.posts | "post.url != page.url" | sample:10 %}
         {% for post in posts %}
           {% include rp.html %}
         {% endfor %}
+      </ul>
       
 
 {% if site.related_posts.size >= 1 %}
