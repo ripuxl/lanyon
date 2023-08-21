@@ -161,6 +161,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+
+
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
@@ -325,6 +327,38 @@ a.sidebar-nav-item:focus {
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
+
+.stickywrap {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    float: none;
+    overflow: hidden;
+    display: scroll;
+    position: fixed;
+    bottom: 0;
+    z-index: 9999
+  }
+
+  .stickyzone {
+    text-align: center;
+    display: block;
+    max-width: 970px;
+    height: auto;
+    overflow: hidden;
+    margin: auto
+  }
+
+  .stickyzone img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle
+  }
+
+  .stickyclose {
+    cursor: pointer;
+    text-align: center
+  }
 
 /* Related posts */
 .related {
