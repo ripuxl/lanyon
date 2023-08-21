@@ -5,11 +5,11 @@ layout: default
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <span class="post-date">{{ page.date | date_to_string }}</span>
-  {{ content }}
+  Kunjungi artikel tentang {{ page.title }} dengan mengklik link berikut : {{ content }}
 
   
 </div>
-
+<p>Bacaan lainnya:</p>
 <div class="Previous-next">
   {% if page.previous.url %}
     <a class="previous" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
@@ -19,30 +19,11 @@ layout: default
     <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
   {% endif %}
 </div>
-
+<p></p> 
 <ul>
         {% assign posts = site.posts | "post.url != page.url" | sample:10 %}
         {% for post in posts %}
           {% include rp.html %}
         {% endfor %}
       </ul>
-      
-
-
-{% if site.related_posts.size >= 1 %}
-<div class="related">
-  <h2>Related posts</h2>
-  <ul class="related-posts">
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <h3>
-          <a href="{{ site.baseurl }}{{ post.url }}">
-            {{ post.title }}
-            <small>{{ post.date | date_to_string }}</small>
-          </a>
-        </h3>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
-{% endif %}
+<p></p>
